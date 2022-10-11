@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!--! Menu  -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Diseño Cero</a>
@@ -27,6 +28,7 @@
             </div>
         </div>
     </nav>
+    <!--! /Menu  -->
 
 
     <!-- Modal - Registro -->
@@ -39,11 +41,11 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+                    <form id="regUser">
                         <label for="">Correo</label>
-                        <input type="email" class="form-control mb-3" placeholder="email" required>
+                        <input type="email" class="form-control mb-3" placeholder="email" required id="sign-email">
                         <label for="">Contraseña</label>
-                        <input type="password" class="form-control mb-3" placeholder="******" required>
+                        <input type="password" class="form-control mb-3" placeholder="******" required id="sign-pass">
                         <button type="submit" class="btn btn-success">Registrar</button>
                     </form>
                 </div>
@@ -76,8 +78,8 @@
 
 
     <!-- Scripts -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/app/registerForm.js"></script>
 </body>
 
 </html>
