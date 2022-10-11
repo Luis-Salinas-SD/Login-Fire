@@ -3,6 +3,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+//! Enlace de autenticación
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,3 +18,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+
+//Exportamos la app
+
+export const auth = getAuth(app);
+

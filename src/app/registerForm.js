@@ -1,3 +1,6 @@
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js"
+import { auth } from "./firebase.js";
+
 const resgisterUser = document.querySelector('#regUser')
 
 resgisterUser.addEventListener('submit', (e) => {
@@ -5,5 +8,6 @@ resgisterUser.addEventListener('submit', (e) => {
 
     let mail = resgisterUser['sign-email'].value
     let pass = resgisterUser['sign-pass'].value
-    console.log(mail, pass);
+
+    createUserWithEmailAndPassword(auth, mail, pass)
 })
