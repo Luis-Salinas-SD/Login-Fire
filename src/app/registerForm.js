@@ -9,5 +9,35 @@ resgisterUser.addEventListener('submit', (e) => {
     let mail = resgisterUser['sign-email'].value
     let pass = resgisterUser['sign-pass'].value
 
-    createUserWithEmailAndPassword(auth, mail, pass)
+    //createUserWithEmailAndPassword(auth, mail, pass)
+    /* .then((respuesta) => {
+        // Signed in
+        //const user = respuesta.user;
+        console.log(respuesta.user.email);
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+    }); */
+    async function getUser() {
+        try {
+            const usuario = await createUserWithEmailAndPassword(auth, mail, pass)
+            console.log(usuario);
+
+            //Cerrar el modal una vez cumplido el try
+            //en closeModal seleccionamos el modal que queremos afectar
+            const closeModal = document.querySelector('#registro')
+            //obtenemos la informacion del modal a traves de los
+            const modal = bootstrap.Modal.getInstance(closeModal).hide()
+
+        } catch (error) {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.info(errorCode)
+            console.warn(errorMessage)
+        }
+
+    }
+    getUser()
 })
