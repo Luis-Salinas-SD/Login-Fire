@@ -9,17 +9,6 @@ resgisterUser.addEventListener('submit', (e) => {
     let mail = resgisterUser['sign-email'].value
     let pass = resgisterUser['sign-pass'].value
 
-    //createUserWithEmailAndPassword(auth, mail, pass)
-    /* .then((respuesta) => {
-        // Signed in
-        //const user = respuesta.user;
-        console.log(respuesta.user.email);
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-    }); */
     async function getUser() {
         try {
             const usuario = await createUserWithEmailAndPassword(auth, mail, pass)
