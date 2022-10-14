@@ -23,13 +23,9 @@ resgisterUser.addEventListener('submit', async (e) => {
 
         showMessage('Bienvenido ' + usuario.user.email, 'success')
 
-        pass.reset()
-
     } catch (error) {
         const errorCode = error.code;
-        const errorMessage = error.message;
         console.info(errorCode)
-        //console.warn(errorMessage)
 
         if (errorCode === 'auth/email-already-in-use') {
             showMessage('El usuario ya esta registrado', 'failed')
