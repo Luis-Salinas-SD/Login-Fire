@@ -32,7 +32,7 @@ resgisterUser.addEventListener('submit', async (e) => {
         //console.warn(errorMessage)
 
         if (errorCode === 'auth/email-already-in-use') {
-            showMessage('El usuario ya exsiste', 'failed')
+            showMessage('El usuario ya esta registrado', 'failed')
         } else if (errorCode === 'auth/invalid-email') {
             showMessage('Correo incorrecto', 'failed')
         } else if (errorCode === 'auth/weak-password') {
