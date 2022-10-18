@@ -1,9 +1,5 @@
-const loggedOutLink = document.querySelectorAll('.logged-out')
-const loggedInLink = document.querySelectorAll('.logged-in')
-
-console.log(loggedInLink);
-console.log(loggedOutLink);
-
+const loggedOutLink = document.querySelectorAll('.logged-out');
+const loggedInLink = document.querySelectorAll('.logged-in');
 
 export const loginCheckF = user => {
     if (user) {
