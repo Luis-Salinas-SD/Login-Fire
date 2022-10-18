@@ -7,10 +7,10 @@ console.log(loggedOutLink);
 
 export const loginCheckF = user => {
     if (user) {
+        loggedInLink.forEach(element => element.style.display = 'block')
         loggedOutLink.forEach(element => element.style.display = 'none')
-        loggedInLink.forEach(element => element.style.display = 'display')
     } else {
-        loggedOutLink.forEach(element => element.style.display = 'display')
+        loggedOutLink.forEach(element => element.style.display = 'block')
         loggedInLink.forEach(element => element.style.display = 'none')
     }
 }
