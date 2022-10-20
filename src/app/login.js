@@ -27,7 +27,7 @@ inicioUser.addEventListener('submit', async (e) => {
         console.log(msm);
         if (msm === 'auth/user-not-found') {
             showMessage('Usuario no encontrado ', 'failed')
-        } else if (msm === 'auth/too-many-requests') {
+        } else if (msm === 'auth/wrong-password') {
             showMessage('Password incorrectos ', 'failed')
         }
     }
