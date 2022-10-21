@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js"
+import { signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js"
 import { auth } from './firebase.js';
 import { showMessage } from "./showToast.js";
 
@@ -22,6 +22,8 @@ inicioUser.addEventListener('submit', async (e) => {
         const modal = bootstrap.Modal.getInstance(closeModal).hide()
         showMessage('Bienvenido ', 'success')
 
+
+
     } catch (error) {
         const msm = error.code
         console.log(msm);
@@ -32,7 +34,10 @@ inicioUser.addEventListener('submit', async (e) => {
         }
     }
 
-
+    /* Funcion que cierra la sesión al pasar 1 minuto */
+    setInterval(async () => {
+        await signOut(auth);
+    }, 60000);
 
 })
 

@@ -4,6 +4,10 @@ import { auth } from "./firebase.js";
 let logout = document.querySelector('#logout')
 
 logout.addEventListener('click', async () => {
-    await signOut(auth)
+    await signOut(auth);
     console.log('El usuario cerró sesión');
 })
+
+
+
+
