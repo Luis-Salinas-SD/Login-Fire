@@ -17,8 +17,8 @@ inicioUser.addEventListener('submit', async (e) => {
         const usuario = await signInWithEmailAndPassword(auth, email, pwd)
         console.log(usuario);
 
-        const closeModal = document.querySelector('#inicio')
-        //obtenemos la informacion del modal a traves de los
+        const closeModal = document.querySelector('#registro')
+        //Cerramos el Modal
         const modal = bootstrap.Modal.getInstance(closeModal).hide()
         showMessage('Bienvenido ', 'success')
 
